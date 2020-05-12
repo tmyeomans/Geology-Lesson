@@ -1,0 +1,82 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While processing text tag {/color} in u'We can grow crystals at home{/color}'.:
+  File "game/script.rpy", line 77, in script
+    "We can grow crystals at home{/color}"
+Exception: u'/color' closes a text tag that isn't open.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 77, in script
+    "We can grow crystals at home{/color}"
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3194, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2094, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 490, in renpy.display.render.render_screen (gen\renpy.display.render.c:6805)
+    rv = render(root, width, height, st, st)
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 675, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 1127, in render
+    st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 1996, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 597, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 969, in segment
+    raise Exception("%r closes a text tag that isn't open." % text)
+Exception: u'/color' closes a text tag that isn't open.
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+Geology 1.0
+Tue Apr 28 16:17:41 2020
