@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 91: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        "{color=FFC53A}3. Tie the string to pencils or sticks and hang one string in each jar\n
+File "game/script.rpy", line 9: invalid syntax
+    Character(kind = centered, text_align = 0.15 what_color = "FFC53A")
+                                                           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Apr 28 16:35:02 2020
+Tue May 12 11:08:42 2020
