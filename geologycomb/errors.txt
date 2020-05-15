@@ -1,0 +1,12 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 191: expected ':' not found.
+(Perhaps you left out a " at the end of the first line.)
+    "{color="FFC53A"}It's activity time!  Do you have a parent to help you?  And do you have sugar, string and jars at home?\n
+             ^
+            If so, you can choose to do the activity now.  If not come back later.{/color}"
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Fri May 15 15:48:16 2020
