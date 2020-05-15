@@ -104,7 +104,7 @@ a "{cps=35}While others investigate volcanoes to study its characteristics and u
 
 scene quake
 show ame_teach at left
-a "{cps=35}Other geologists study earthquakes and uses physics to learn how they behave{/cps}"
+a "{cps=35}Other geologists study earthquakes and uses physics to learn how seismic waves travel through the ground{/cps}"
 
 scene oil
 show ame_teach at left
@@ -126,19 +126,34 @@ show layers
 
 # layers of the earth
 
+scene bg plain
+show ame_blink:
+    xalign 0.5
+    yalign 0.5
+
 a "{cps=35}To begin, we first have to understand the different sections that makes up the Earth{/cps}"
 a "{cps=35}The planet Earth can be divided into different layers{/cps}"
+
+scene bg plain
+show tle 1
 a "{cps=35}Imagine when you cut up an egg into half, you can see distinct layers.{/cps}"
-a "{cps=35}The shell of the egg represents the crust.{/cps}"
-a "{cps=35}Then, the white portion represent the mantle.{/cps}"
-a "{cps=35}And the yolk is the core of the Earth.{/cps}"
+
+scene bg plain
+show tle 3
 a "{cps=35}Like the shell in an egg, the crust is the outermost and thinnest layer of the Earth where we live on.{/cps}"
+
+scene bg plain
+show tle 4
+a "{cps=35}Then, the white portion represent the mantle.{/cps}"
 a "{cps=35}The mantle underneath the crust consists of melted rocks and is the source of magma{/cps}"
 a "{cps=35}which is the substance that erupts out from volcanoes.{/cps}"
-a "{cps=35}Then, the core is made out of iron alloy that consists of two parts{/cps}"
-a "{cps=35}The outer core that is in solid state{/cps}"
-a "{cps=35}an the inner core in a liquid state.{/cps}"
-a "{cps=35}As we go deeper down to the core, the hotter the Earth gets.{/cps}"
+
+scene bg plain
+show tle 5
+a "{cps=35}And the yolk is the core of the Earth.{/cps}"
+a "{cps=35}The core is made out of iron alloy that consists of two parts{/cps}"
+a "{cps=35}The outer core is solid, while the inner core is liquid.{/cps}"
+a "{cps=35}As we go deeper down the core, the hotter the Earth gets.{/cps}"
 a "{cps=35}within the inner core, it can get hot as high  as 5000°C{/cps}"
 
 return
