@@ -242,12 +242,11 @@ label sedimentary:
     a "{cps=35}Those pieces may start off huge, but then are worn down themselves{/cps}"
     hide mountain with dissolve
 
-#need a better river scene
-    show river
+#need a river scene
     a "{cps=35}These pieces can be transported downhill and are washed into streams and rivers{/cps}"
-    hide river with dissolve
 
-    show beach
+
+    show beach with dissolve
     a "{cps=35}Those tiny pieces can eventually be tranported here, the beach!{/cps}"
     a "{cps=35}From there the grains can make their way underwater{/cps}"
     a "{cps=35}Grains can stack up on one another, with enough pressure to eventually squish them together, making a rock{/cps}"
@@ -292,8 +291,11 @@ label sed_layers:
     b "We can see how sedimentary rock layers are formed \n
     \n
     For this activity we will need the following supplies: \n
+    \n
     Clear empty plastic bottle with a lid \n
+    \n
     Water \n
+    \n
     A place to find different sized grains (dirt, sand, gravel)"
 
 
@@ -329,6 +331,8 @@ label carbonates:
     hide coral2 with dissolve
     show coral at right with dissolve
     a "{cps=35}Here is another example!{/cps}"
+
+    hide coral with dissolve
 
 
 
