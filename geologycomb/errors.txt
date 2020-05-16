@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 191: expected ':' not found.
-(Perhaps you left out a " at the end of the first line.)
-    "{color="FFC53A"}It's activity time!  Do you have a parent to help you?  And do you have sugar, string and jars at home?\n
-             ^
-            If so, you can choose to do the activity now.  If not come back later.{/color}"
+File "game/script.rpy", line 139: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    a "{cps=35}To begin, we first have to understand the different sections that makes up the Earth{/cps}"
+                                                                                                          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri May 15 15:48:16 2020
+Sat May 16 15:41:29 2020
