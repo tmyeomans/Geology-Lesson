@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 139: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    a "{cps=35}To begin, we first have to understand the different sections that makes up the Earth{/cps}"
-                                                                                                          ^
+File "game/script.rpy", line 420: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    c "{b}Other Resources{/b}"
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat May 16 15:41:29 2020
+Mon May 18 15:02:17 2020

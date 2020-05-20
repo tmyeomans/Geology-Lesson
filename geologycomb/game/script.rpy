@@ -59,6 +59,9 @@ define a = Character("Amethyst")
 #activity text
 define b = Character(kind = centered, what_text_align = 0.0, what_color = "FFC53A")
 
+#other central text
+define c = Character(kind = centered, what_text_align = 0.0, what_color = "EDEBD7")
+
 label start:
 
 # title card
@@ -187,23 +190,18 @@ label start:
 
     scene bg plain
     show ame_teach at left
-    show intrusive_ig at topright
+    show intrusiveig_wframe at topright
     a "{cps=35}This is an example of an igneous rock that cooled really slowly{/cps}"
     a "{cps=35} We can tell that by the big crystals that we can see in the rock{/cps}"
     a "{cps=35}The crystals had lots of time to grow big because it cooled slowly{/cps}"
-    hide intrusive_ig with dissolve
+    hide intrusiveig_wframe with dissolve
 
-    show ext_igo at topright with dissolve
+    show ext_igo_wframe at topright with dissolve
     a "{cps=35}This is an example of an extrusive igneous rock{/cps}"
     a "{cps=35}Can you see any crystals in this one?{/cps}"
     a "{cps=35}This rock cooled so fast that the crystals are too small to be seen with your eyes.{/cps}"
-    hide ext_igo with dissolve
+    hide ext_igo_wframe with dissolve
 
-    show ext_igv at topright with dissolve
-    a "{cps=35}What do you think about this one?  Do you think it's extrusive or intrustive?{/cps}"
-    a "{cps=35}This one is extrusive like the last one.  It's different because it has bubbles trapped in it.{/cps}"
-    a "{cps=35}The bubbles were trapped when it left the volcano {/cps}"
-    hide ext_igv with dissolve
     hide ame_teach
 
     menu:
@@ -242,7 +240,7 @@ label crystal_activity:
     5. Wait several days.  This could take some time"
 
 
-    a "Look at your crystal growth. Did the crystals look different depending where they grew?"
+    a "{cps=35}Look at your crystal growth. Did the crystals look different depending where they grew?{/cps}"
 
 
 
@@ -255,18 +253,19 @@ label sedimentary:
     a "{cps=35}Let's move on to sedimentary rocks. This looks like a good place to start.{/cps}"
     a "{cps=35}There are three main types of sedimentary rocks.  Clastics, carbonates and evaporites.{/cps}"
     a "{cps=35}We'll talk about clastic sedimentary rocks first.{/cps}"
-    a "{cps=35}Clastics are formed by the erosion of existing rocks into tiny pieces{/cps}"
+    a "{cps=35}Clastics are formed by the erosion of existing rocks into smaller pieces{/cps}"
     a "{cps=35}Think about years of water, wind and snow day after day wearing down these mountains{/cps}"
     a "{cps=35}Eventually this breaks the rock apart into pieces{/cps}"
-    a "{cps=35}Those pieces may start off huge, but then are worn down themselves{/cps}"
+    a "{cps=35}Those pieces may start off huge, but those pieces are also worn down{/cps}"
+    a "{cps=35}They can eventually become tiny pieces of sand or mud.{/cps}"
     hide mountain with dissolve
 
 #need a river scene
-    a "{cps=35}These pieces can be transported downhill and are washed into streams and rivers{/cps}"
+    a "{cps=35}These grains can be transported downhill and are washed into streams and rivers{/cps}"
 
 
     show beach with dissolve
-    a "{cps=35}Those tiny pieces can eventually be tranported here, the beach!{/cps}"
+    a "{cps=35}Those rivers carry the grains unti they can be tranported here, the beach!{/cps}"
     a "{cps=35}From there the grains can make their way underwater{/cps}"
     a "{cps=35}Grains can stack up on one another, with enough pressure to eventually squish them together, making a rock{/cps}"
     hide beach with dissolve
@@ -276,14 +275,14 @@ label sedimentary:
     a "{cps=35}We can classify clastic sedimentary rocks based on their grain size{/cps}"
 
 
-    show cgl at right
+    show cgl_wframe at topright
     a "{cps=35}This is a conglomerate.  Look at how big the grains, or clasts are in this example{/cps}"
-    hide cgl with dissolve
+    hide cgl_wframe with dissolve
 
-    show sandstone at topright
+    show sandstone_wframe at topright
     a "{cps=35}This is an example of sandstone.  It looks just like the beach sand all pressed together{/cps}"
     a "{cps=35}You can even see fossil shells in this sample!{/cps}"
-    hide sandstone with dissolve
+    hide sandstone_wframe with dissolve
     hide ame_teach
 
 
@@ -312,26 +311,24 @@ label sed_layers:
     For this activity we will need the following supplies: \n
     \n
     Clear empty plastic bottle with a lid \n
-    \n
     Water \n
-    \n
     A place to find different sized grains (dirt, sand, gravel)"
 
 
     b "Once you have a bottle to use and and an {u}adult{/u} to help, you are ready to start building sedimentary layers \n
     \n
-    1. With your {u}adult{/u}, explore your backyard and neighbourhood for different sized grains that will fit in your bottle\n
+    1. With an {u}adult{/u}, explore your backyard and neighbourhood for different sized grains that fit in your bottle\n
     \n
-    2. Fill the bottle about halfway with grains, making sure you have lots of different sizes.\n
+    2. Fill the bottle about halfway with grains.\n
     \n
     3. Once you are at home, fill the bottle most of the way up to the top with water and put the lid on\n
     \n
-    4. Take the bottle outside and give it a good shake to mix everythign up\n
+    4. Take the bottle outside and give it a good shake to mix everything up\n
     \n
     5. Set the bottle down and wait."
 
 
-    a "After a few minutes, look at your bottle.  Do you see layers?  What observations do you have about the layers?"
+    a "{cps=35}After a few minutes, look at your bottle.  Do you see layers?  What observations do you have about the layers?{/cps}"
 
 
 
@@ -344,14 +341,11 @@ label carbonates:
     a "{cps=35}These sedimentary rocks are made by from the fossilized bodies of sea creatures{/cps}"
     a "{cps=35}Sometimes you can see the fossils in the rocks, sometimes you can't{/cps}"
 
-    show coral2 at right with dissolve
+    show coral_wframe at topright with dissolve
     a "{cps=35}This is an example of a carbonate rock where you can see the fossils{/cps}"
     a "{cps=35}The circle shaped things you see on the rock are ancient corals formed under the sea.{/cps}"
-    hide coral2 with dissolve
-    show coral at right with dissolve
-    a "{cps=35}Here is another example!{/cps}"
 
-    hide coral with dissolve
+    hide coral_wframe with dissolve
 
 
 
@@ -361,19 +355,105 @@ label carbonates:
     a "{cps=35}Salt is an example of an evaporitic rock!  Geologists call it halite.{/cps}"
 
 
-    a "{cps=35}{/cps}"
-
-
-
 
 #Metamorphic Rocks
 
 
+    a "{cps=35}Let's move on to the last type of rock, the metamorphic rocks!{/cps}"
+    a "{cps=35}Metamorphic rocks are made when an existing rock is put under heat and pressure.{/cps}"
+    a "{cps=35}Not enough heat to melt it like an igneous rock, but enough to change it{/cps}"
+    a "{cps=35}The original rock can be igneous, sedimentary or even another metamorphic rock!{/cps}"
+    a "{cps=35}How can we tell if a rock is metamorphic?{/cps}"
+    a "{cps=35}Just like sedimentary rocks, they will often have layers or bands in them.{/cps}"
+    a "{cps=35}Some of the differences are the minerals and what the bands look like.{/cps}"
+    a "{cps=35}If you see a lot of shiny minerals, that could be a clue it is metamorhpic{/cps}"
+    a "{cps=35}If the layers or bands are not straight but wiggly, that could be a clue it is metamorhpic{/cps}"
+    a "{cps=35}{/cps}"
 
-    #Bottle with gravel, sand, silt exercise
+    hide ame_teach
+
+
+
+
+    menu:
+        "It's activity time!  Do you have a parent to help you?  And do you have flour, salt, cream of tartar, food colouring and vegetable oil?\n
+        If so, you can choose to do the activity now.  If not come back later."
+
+        "Let's do the activity now!":
+            jump meta_layers
+        "I'll do the activity later!":
+            jump carbonates
+
+
+
+
+
+
+
+label meta_layers:
+
+
+    b "{b} ACTIVITY TIME{/b}"
+    b "We can see how metamorphic rock layers are formed \n
+    \n
+    For this activity we will be making modelling clay as the first step.\n
+    The colours will get mixed up. If you have nice clay, you may not want to use it and make this instead.
+    \n
+    \n
+    We need the following supplies: \n
+    \n
+    2 cups all purpose flour \n
+    3/4 cup salt \n
+    4 teaspoons cream of tartar\n
+    2 cups lukewarm water\n
+    2 tablespoons of vegetable oil\n
+    Food colouring\n
+    Bag for storage"
+
+
+    b "Once you have your supplies and an {u}adult{/u} to help, you are ready to start \n
+    \n
+    Have an {u} adult {/u} make the modelling clay for you (steps 1-5) and you can do the experiment after (steps 6-12)\n
+    \n
+    1.  Put the flour, salt and cream of tartar in a big pot and stir\n
+    \n
+    2. Add the water and oil\n
+    \n
+    3. Cook this over medium heat, stirring until it forms a ball\n
+    \n
+    4. Remove the modelling clay from the heat and let cool for a bit\n
+    \n
+    5. Once cooled, knead and separate into different piles for different colours (minimum 2 colours)"
+
+
+
+    b "Now it's your turn {u}students!{/u}\n
+    \n
+    6. Take a small ball of clay of the first colours and shape it into a flat rectangle. This will be your first layer.\n
+    \n
+    7. Take a second ball of clay of the second colour and make a rectangle the same as the first one.  Stack this on top of the first layer\n
+    \n
+    8. Add a third layer on top of your two layers\n
+    \n
+    9. Look at the layers from the top, bottom and sides.  Can you see all three?  What does it look like?\n
+    \n
+    10. Press down on the top of the layers and squish them together.  Can you still see all three layers?  Any changes?\n
+    \n
+    11. If you fold your layers in half, what does it look like now?\n
+    \n
+    12. Fold, flatten, twist and experiment with your layers to see how it changes"
+
+
+
+    a "{cps=35}Your metamorphic layers can be layered and folded.  What happened to the layers?  Do you still have your original colours or are new ones formed?{/cps}"
+    a "{cps=35}Your original layers you built was like a sedimentary rock{/cps}"
+    a "{cps=35}You then squished, folded and twisted the layers, which was acting like heat and pressure, changing the original rock{/cps}"
+    a "{cps=35}New colours forming is like new metamorphic minerals forming from the heat and pressure requried to make the rocks{/cps}."
+    a "{cps=35}How is this different from the sedimentary rocks?{/cps}"
+
+
     #Raisin/candy exercise
 
-    #Clay exercise
     #Rock quiz?
     #How to see inside the earth
     #Drilling
@@ -381,7 +461,8 @@ label carbonates:
     #Mapping
 
 
-#Scale
+label scale:
+
     show mountain
 
     a "{cps=35}Geologists look at rocks at different scales{/cps}"
@@ -392,7 +473,7 @@ label carbonates:
     hide mountain with dissolve
 
 
-    show thin_section
+    show thin_section at topright
     a "{cps=35}This is an example of a sandstone rock from Alberta seen under a microscope{/cps}"
     a "{cps=35}{/cps}"
     hide thin_section with dissolve
@@ -404,8 +485,6 @@ label carbonates:
 
 
 #Other resources
-
-
 
 
 
