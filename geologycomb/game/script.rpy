@@ -195,21 +195,23 @@ label start:
 #Igneous Rocks
     show ign
     " "
-    scene bg plain
+    scene magma
     show ame_blink at left
-
-    a "{cps=35}Igneous rocks are formed by melting exiting rocks dep underground{/cps}"
+#    show magma at topright behind ame_blink with dissolve
+    a "{cps=35}Igneous rocks are formed by melting existing rocks dep underground{/cps}"
     a "{cps=35}Eventually these rocks start melting until they become a liquid we call magma{/cps}"
     a "{cps=35}Depending on the type of magma, it can reach over 1500 degrees Celcius!{/cps}"
     a "{cps=35}Once the rock is a magma, this liquid rock can move, and eventually it will cool down{/cps}"
     a "{cps=35}This magma can cool very quickly or very slowly{/cps}"
     a "{cps=35}How do you think magma could cool quickly?{/cps}"
 
-    scene volc
+    scene bg plain
+    show volc_photo at top with dissolve
     a "{cps=35}If you guessed volcanoes for cooling quickly, you'd be right!{/cps}"
     a "{cps=35}Volcanoes push magma to the surface so the hot magma is exposed to the much colder air, making the magma turn back into a solid really quickly{/cps}"
+    hide volc_photo with dissolve
 
-#add drawing of magma chamber
+
     scene bg plain
     show ame_blink at left
     a "{cps=35}Magma can cool slowly by moving away from a heat source and by staying underground{/cps}"
@@ -315,11 +317,17 @@ label sedimentary:
     a "{cps=35}This is an example of sandstone.  It looks just like the beach sand all pressed together{/cps}"
     a "{cps=35}You can even see fossil shells in this sample!{/cps}"
     hide sandstone_wframe with dissolve
+
+
+    show sed_layers behind ame_teach with dissolve
+    a "{cps=35}Sedimentary rocks often form layers.{/cps}"
+    a "{cps=35}This photo shows an example of these layers{/cps}"
+    a "{cps=35}Some of the layers are sandstone, some of the layers are shale{/cps}"
+    hide sed_layers with dissolve
+
+
+#picture of mudstone/shale
     hide ame_teach
-
-
-
-
 
     menu:
         "It's activity time!  Do you have a parent to help you?  And do you have an empty plastic bottle with a lid?\n
@@ -379,7 +387,7 @@ label carbonates:
 
     hide coral_wframe with dissolve
 
-
+#picture of lime mudstone or something less fossily
 
 
     a "{cps=35}The last type of sedimentary rocks are called evaporites{/cps}"
@@ -498,17 +506,18 @@ label meta_layers:
 
 label scale:
 
-    show mountain
+    show ame_blink
 
     a "{cps=35}Geologists look at rocks at different scales{/cps}"
     a "{cps=35}What does this mean?{/cps}"
+    show mountains_from_air at right
     a "{cps=35}Sometimes they like the big picture and look at entire mountain ranges{/cps}"
+    hide mountains_from_air with dissolve
+    #add photo of rock in hand
     a "{cps=35}Sometimes they look at rocks they can hold in their hand{/cps}"
-    a "{cps=35}And sometimes they use microscopes to look at rocks{/cps}"
-    hide mountain with dissolve
-
 
     show thin_section at topright
+    a "{cps=35}And sometimes they use microscopes to look at rocks{/cps}"
     a "{cps=35}This is an example of a sandstone rock from Alberta seen under a microscope{/cps}"
     a "{cps=35}{/cps}"
     hide thin_section with dissolve
