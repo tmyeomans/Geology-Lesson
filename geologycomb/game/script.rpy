@@ -190,13 +190,13 @@ label start:
 
     scene bg plain
     show ame_teach at left
-    show intrusiveig_wframe at topright
+    show intrusiveig_wframe at topright behind ame_teach with dissolve
     a "{cps=35}This is an example of an igneous rock that cooled really slowly{/cps}"
     a "{cps=35} We can tell that by the big crystals that we can see in the rock{/cps}"
     a "{cps=35}The crystals had lots of time to grow big because it cooled slowly{/cps}"
     hide intrusiveig_wframe with dissolve
 
-    show ext_igo_wframe at topright with dissolve
+    show ext_igo_wframe at topright behind ame_teach with dissolve
     a "{cps=35}This is an example of an extrusive igneous rock{/cps}"
     a "{cps=35}Can you see any crystals in this one?{/cps}"
     a "{cps=35}This rock cooled so fast that the crystals are too small to be seen with your eyes.{/cps}"
@@ -221,26 +221,30 @@ label crystal_activity:
     b "We can grow crystals at home \n
     \n
     For this activity we will need the following supplies: \n
-    3 cups of sugar \n
-    1 cup of boiling water \n
+    4 cups of sugar \n
+    2 cup of boiling water \n
     2-3 clean jars \n
-    cotton string\n"
+    cotton string\n
+    food colouring (optional)"
 
 
     b "Once you have all of your materials and an {u}adult{/u} to help, you are ready to start growing your crystals \n
+    {u}Adults will need to do all of the steps while the students can watch{/u}
     \n
-    1. Get an {u}adult{/u} to help you boil some water and dissolve the sugar in it\n
+    1. Boil the water on the stove and slowly add the sugar to it, stirring the whole time\n
     \n
-    2. Allow the sugar solution to cool a little before asking an {u}adult{/u} to put the liquid in the jars\n
+    2. Once all the sugar is dissolved, remove it from the heat.\n
+    \n
+    3. Allow the sugar solution to cool a little before putting the liquid in the jars.  At this point you can add a drop of food colouring to the jar if you like\n
     \n
     3. Tie the string to pencils or sticks and hang one string in each jar\n
     \n
-    4. Place the jars in a couple different places in your house.  Don't touch them for several days\n
+    4. Place the jars in a couple different places in your house where they won't be bothered.  Don't touch them for several days\n
     \n
     5. Wait several days.  This could take some time"
 
 
-    a "{cps=35}Look at your crystal growth. Did the crystals look different depending where they grew?{/cps}"
+    a "{cps=35}Students - Look at your crystal growth. Did the crystals look different depending where they grew?{/cps}"
 
 
 
@@ -249,7 +253,7 @@ label sedimentary:
 #Sedimentary Rocks
     scene bg plain
 
-    show mountain
+    show mountain with dissolve
     a "{cps=35}Let's move on to sedimentary rocks. This looks like a good place to start.{/cps}"
     a "{cps=35}There are three main types of sedimentary rocks.  Clastics, carbonates and evaporites.{/cps}"
     a "{cps=35}We'll talk about clastic sedimentary rocks first.{/cps}"
@@ -275,11 +279,11 @@ label sedimentary:
     a "{cps=35}We can classify clastic sedimentary rocks based on their grain size{/cps}"
 
 
-    show cgl_wframe at topright
+    show cgl_wframe at topright behind ame_teach with dissolve
     a "{cps=35}This is a conglomerate.  Look at how big the grains, or clasts are in this example{/cps}"
     hide cgl_wframe with dissolve
 
-    show sandstone_wframe at topright
+    show sandstone_wframe at topright behind ame_teach with dissolve
     a "{cps=35}This is an example of sandstone.  It looks just like the beach sand all pressed together{/cps}"
     a "{cps=35}You can even see fossil shells in this sample!{/cps}"
     hide sandstone_wframe with dissolve
@@ -341,7 +345,7 @@ label carbonates:
     a "{cps=35}These sedimentary rocks are made by from the fossilized bodies of sea creatures{/cps}"
     a "{cps=35}Sometimes you can see the fossils in the rocks, sometimes you can't{/cps}"
 
-    show coral_wframe at topright with dissolve
+    show coral_wframe at topright behind ame_teach with dissolve
     a "{cps=35}This is an example of a carbonate rock where you can see the fossils{/cps}"
     a "{cps=35}The circle shaped things you see on the rock are ancient corals formed under the sea.{/cps}"
 
@@ -365,11 +369,15 @@ label carbonates:
     a "{cps=35}The original rock can be igneous, sedimentary or even another metamorphic rock!{/cps}"
     a "{cps=35}How can we tell if a rock is metamorphic?{/cps}"
     a "{cps=35}Just like sedimentary rocks, they will often have layers or bands in them.{/cps}"
+
+
+    show meta_wframe at topright behind ame_teach with dissolve
     a "{cps=35}Some of the differences are the minerals and what the bands look like.{/cps}"
     a "{cps=35}If you see a lot of shiny minerals, that could be a clue it is metamorhpic{/cps}"
     a "{cps=35}If the layers or bands are not straight but wiggly, that could be a clue it is metamorhpic{/cps}"
     a "{cps=35}{/cps}"
 
+    hide meta_wframe with dissolve
     hide ame_teach
 
 
@@ -382,7 +390,7 @@ label carbonates:
         "Let's do the activity now!":
             jump meta_layers
         "I'll do the activity later!":
-            jump carbonates
+            jump scale
 
 
 

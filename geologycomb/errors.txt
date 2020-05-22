@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 420: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    c "{b}Other Resources{/b}"
-    ^
+File "game/script.rpy", line 193: end of line expected.
+    show intrusiveig_wframe at topright with dissolve behind ame_teach
+                                                      ^
+
+File "game/script.rpy", line 199: end of line expected.
+    show ext_igo_wframe at topright with dissolve behind ame_teach
+                                                  ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon May 18 15:02:17 2020
+Thu May 21 18:21:17 2020
