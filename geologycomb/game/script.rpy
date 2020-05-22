@@ -39,7 +39,10 @@ image ame_teach:
     .1
     repeat
 
-# Topic Cover
+
+
+# Topic Covers
+    # What is a geologists?
 image geo:
     "geo_1.jpg"
     .5
@@ -47,10 +50,35 @@ image geo:
     .5
     repeat
 
+    # layers of earth
 image layers:
     "layers_1"
     .5
     "layers_2"
+    .5
+    repeat
+
+    # igneous rocks
+image ign:
+    "ign.jpg"
+    .5
+    "ign2.jpg"
+    .5
+    repeat
+
+    # sedimentary rocks
+image sed:
+    "sed.jpg"
+    .5
+    "sed2.jpg"
+    .5
+    repeat
+
+    # metamorphic rocks
+image met:
+    "met.jpg"
+    .5
+    "met2.jpg"
     .5
     repeat
 
@@ -89,6 +117,7 @@ label start:
     a "{cps=35}but that's what I think makes geology so exciting!{/cps}"
 
     show geo
+    ""
 # what is a geologists/geoscientists? What do they study?
     # position Amethyst at the corner
 
@@ -129,11 +158,9 @@ label start:
         yalign 0.5
     a "{cps=35}and increases our quality of life.{/cps}"
 
-    show layers
-
-
 # layers of the earth
-
+    show layers
+    ""
     scene bg plain
     show ame_blink:
         xalign 0.5
@@ -165,9 +192,9 @@ label start:
     a "{cps=35}within the inner core, it can get hot as high  as 5000°C{/cps}"
 
 
-
-
 #Igneous Rocks
+    show ign
+    " "
     scene bg plain
     show ame_blink at left
 
@@ -251,8 +278,9 @@ label crystal_activity:
 
 label sedimentary:
 #Sedimentary Rocks
+    show sed
+    " "
     scene bg plain
-
     show mountain with dissolve
     a "{cps=35}Let's move on to sedimentary rocks. This looks like a good place to start.{/cps}"
     a "{cps=35}There are three main types of sedimentary rocks.  Clastics, carbonates and evaporites.{/cps}"
@@ -358,11 +386,10 @@ label carbonates:
     a "{cps=35}These sedimentary rocks are formed when water evaporates from a body of water{/cps}"
     a "{cps=35}Salt is an example of an evaporitic rock!  Geologists call it halite.{/cps}"
 
-
-
 #Metamorphic Rocks
-
-
+    show met
+    " "
+    scene bg plain
     a "{cps=35}Let's move on to the last type of rock, the metamorphic rocks!{/cps}"
     a "{cps=35}Metamorphic rocks are made when an existing rock is put under heat and pressure.{/cps}"
     a "{cps=35}Not enough heat to melt it like an igneous rock, but enough to change it{/cps}"
