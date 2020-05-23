@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {csp=35} in u'{csp=35}Igneous rocks are formed by melting exiting rocks dep underground{/cps}'.:
-  File "game/script.rpy", line 152, in script
-    a "{csp=35}Igneous rocks are formed by melting exiting rocks dep underground{/cps}"
-Exception: Unknown text tag u'csp=35'
+While loading <'Image' 'rc_1.jpg'>:
+  File "game/script.rpy", line 509, in script
+    " "
+IOError: Couldn't find file 'rc_1.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 152, in script
-    a "{csp=35}Igneous rocks are formed by melting exiting rocks dep underground{/cps}"
+  File "game/script.rpy", line 509, in script
+    " "
   File "C:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
@@ -50,39 +50,31 @@ Full traceback:
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 675, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\image.py", line 500, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\image.py", line 306, in wrap_render
+    rend = render(child, w, h, st, at)
   File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
   File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 1127, in render
-    st, at)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 1996, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 597, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 1179, in segment
-    raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag u'csp=35'
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\im.py", line 583, in render
+    return cache.get(self, render=True)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\im.py", line 266, in get
+    surf = image.load()
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\im.py", line 628, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'rc_1.jpg'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 geologyDraft 1.0
-Fri May 15 08:11:02 2020
+Sat May 23 06:32:59 2020
