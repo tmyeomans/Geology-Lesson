@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Introduction to Geology")
+define config.name = _("geologyDraft")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Introduction to Geology"
+define build.name = "geologyDraft"
 
 
 ## Sounds and music ############################################################
@@ -142,7 +142,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "Introduction to Geology-1588438830"
+define config.save_directory = "geologyDraft-1588438830"
 
 
 ## Icon ########################################################################
