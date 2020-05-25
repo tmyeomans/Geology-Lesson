@@ -97,6 +97,7 @@ label start:
 
     play music "toy_piano.mp3"
 
+
     scene title
 
     scene bg plain
@@ -325,6 +326,11 @@ label sedimentary:
     a "{cps=35}You can even see fossil shells in this sample!{/cps}"
     hide sandstone_wframe with dissolve
 
+    show silt_wframe at topright behind ame_teach with dissolve
+    a "{cps=35}Some sedimentary rocks have grains so small you can't really see them{/cps}"
+    a "{cps=35}These are called siltstones or shales{/cps}"
+    a "{cps=35}This is an example of a siltstone.  If you look really really close you can see some grains.  If you couldn't you would call it a shale{/cps}"
+    hide silt_wframe with dissolve
 
     show sed_layers behind ame_teach with dissolve
     a "{cps=35}Sedimentary rocks often form layers.{/cps}"
@@ -333,7 +339,7 @@ label sedimentary:
     hide sed_layers with dissolve
 
 
-#picture of mudstone/shale
+
     hide ame_teach
 
     menu:
@@ -381,7 +387,7 @@ label sed_layers:
 
 
 label carbonates:
-
+    scene bg plain
     show ame_teach at left
 
     a "{cps=35}Another type of sedimentary rocks we call carbonate rocks{/cps}"
@@ -391,16 +397,18 @@ label carbonates:
     show coral_wframe at topright behind ame_teach with dissolve
     a "{cps=35}This is an example of a carbonate rock where you can see the fossils{/cps}"
     a "{cps=35}The circle shaped things you see on the rock are ancient corals formed under the sea.{/cps}"
-
     hide coral_wframe with dissolve
 
-#picture of lime mudstone or something less fossily
+    show limemud_wframe at topright behind ame_teach with dissolve
+    a "{cps=35}Not all carbonate rocks have fossils{/cps}"
+    a "{cps=35}In this example you have the same carbonate that makes up shell material instead making mud to form the carbonate rock{/cps}"
+    hide limemud_wframe with dissolve
 
-
+    show evap_wframe at topright behind ame_teach with dissolve
     a "{cps=35}The last type of sedimentary rocks are called evaporites{/cps}"
     a "{cps=35}These sedimentary rocks are formed when water evaporates from a body of water{/cps}"
-    a "{cps=35}Salt is an example of an evaporitic rock!  Geologists call it halite.{/cps}"
-
+    a "{cps=35}Salt is an example of an evaporitic rock.  Geologists call it halite.{/cps}"
+    hide evap_wframe with dissolve
 #Metamorphic Rocks
     show met
     " "
@@ -417,8 +425,13 @@ label carbonates:
     a "{cps=35}Some of the differences are the minerals and what the bands look like.{/cps}"
     a "{cps=35}If you see a lot of shiny minerals, that could be a clue it is metamorhpic{/cps}"
     a "{cps=35}If the layers or bands are not straight but wiggly, that could be a clue it is metamorhpic{/cps}"
-    a "{cps=35}{/cps}"
+
     hide meta_wframe with dissolve
+
+    show meta2_wframe at topright behind ame_teach with dissolve
+    a "{cps=35}Here is another metamorphic rock{/cps}"
+    hide meta2_wframe with dissolve
+
     hide ame_teach
 
 
@@ -443,36 +456,39 @@ label meta_layers:
 
 
     b "{b} ACTIVITY TIME{/b}"
-    b "We can see how metamorphic rock layers are formed \n
+    b "We can see how metamorphic rock layers are formed\n
     \n
-    For this activity we will be making modelling clay as the first step.\n
-    The colours will get mixed up. If you have nice clay, you may not want to use it and make this instead.
+    For this activity we will be using modelling clay.\n
     \n
+    The colours will get mixed up so you may not want to use nice clay.\n
     \n
-    We need the following supplies: \n
+    We have adapted a recipe from https://funlearningforkids.com/easy-play-dough-recipe-without-cream-tartar/ \n
     \n
-    2 cups all purpose flour \n
-    3/4 cup salt \n
-    4 teaspoons cream of tartar\n
-    2 cups lukewarm water\n
+    If using your own clay, you can skip to step 6."
+
+    b "We need the following supplies: \n
+    \n
+    1 cup flour \n
+    1/4 cup salt \n
+    3 tablespoons lemon juice\n
     2 tablespoons of vegetable oil\n
+    3/4 cup water\n
     Food colouring\n
     Bag for storage"
 
 
-    b "Once you have your supplies and an {u}adult{/u} to help, you are ready to start \n
+
+    b "Have an {u} adult {/u} make the modelling clay for you (steps 1-5) and you can do the experiment after (steps 6-12)\n
     \n
-    Have an {u} adult {/u} make the modelling clay for you (steps 1-5) and you can do the experiment after (steps 6-12)\n
+    1.  Put the lemon juice, oil and water in a pot on the stove and heat on medium heat until hot but not boiling.\n
     \n
-    1.  Put the flour, salt and cream of tartar in a big pot and stir\n
+    2. Add the dry ingredients.\n
     \n
-    2. Add the water and oil\n
+    3. Cook this over medium heat for a couple of minute, stirring until it forms a ball\n
     \n
-    3. Cook this over medium heat, stirring until it forms a ball\n
+    4. Remove the modelling clay from the heat and let it cool\n
     \n
-    4. Remove the modelling clay from the heat and let cool for a bit\n
-    \n
-    5. Once cooled, knead and separate into different piles for different colours (minimum 2 colours)"
+    5. Knead and separate into different piles.  Add a separate food colour to each pile (minimum 2 colours)"
 
 
 
@@ -480,26 +496,26 @@ label meta_layers:
     \n
     6. Take a small ball of clay of the first colours and shape it into a flat rectangle. This will be your first layer.\n
     \n
-    7. Take a second ball of clay of the second colour and make a rectangle the same as the first one.  Stack this on top of the first layer\n
+    7. Take a second ball of clay of the second colour and make another rectangle.  Stack this on top of the first layer\n
     \n
     8. Add a third layer on top of your two layers\n
     \n
     9. Look at the layers from the top, bottom and sides.  Can you see all three?  What does it look like?\n
     \n
-    10. Press down on the top of the layers and squish them together.  Can you still see all three layers?  Any changes?\n
+    10. Press down on the top of the layers and squish them together.  What does it look like?\n
     \n
     11. If you fold your layers in half, what does it look like now?\n
     \n
-    12. Fold, flatten, twist and experiment with your layers to see how it changes"
+    12. Fold, flatten, twist and experiment with your layers to see how it changes."
 
-
-    #add photos of exercise
     show ame_blink
+    show meta_activity with dissolve
     a "{cps=35}Your metamorphic layers can be layered and folded.  What happened to the layers?  Do you still have your original colours or are new ones formed?{/cps}"
-    a "{cps=35}Your original layers you built was like a sedimentary rock{/cps}"
+    a "{cps=35}Your original layers you built was like a sedimentary rock like in picture 1{/cps}"
     a "{cps=35}You then squished, folded and twisted the layers, which was acting like heat and pressure, changing the original rock{/cps}"
     a "{cps=35}New colours forming is like new metamorphic minerals forming from the heat and pressure requried to make the rocks{/cps}."
     a "{cps=35}How is this different from the sedimentary rocks?{/cps}"
+    hide meta_activity with dissolve
     hide ame blink
 
 
@@ -552,17 +568,18 @@ label scale:
     show ame_blink
     a "{cps=35}Geologists look at rocks at different scales{/cps}"
     a "{cps=35}What does this mean?{/cps}"
+    a "{cps=35}You can tell different things about rocks depending how closely you look at them{/cps}"
     show mountains_from_air at right
-    a "{cps=35}Sometimes they like the big picture and look at entire mountain ranges{/cps}"
+    a "{cps=35}Sometimes they look at entire mountain ranges to understand what the past looked like in an area{/cps}"
     hide mountains_from_air with dissolve
     #add photo of rock in hand
-    a "{cps=35}Sometimes they look at rocks they can hold in their hand{/cps}"
+    a "{cps=35}Sometimes they look at rocks they can hold in their hand to tell them about properties of the rocks themselves{/cps}"
 
-    show thin_section at topright
-    a "{cps=35}And sometimes they use microscopes to look at rocks{/cps}"
-    a "{cps=35}This is an example of a sandstone rock from Alberta seen under a microscope{/cps}"
+    show ts_wframe at topright behind ame_blink with dissolve
+    a "{cps=35}And sometimes they use microscopes to look at rocks to understand more about the grains and the spaces between the grains{/cps}"
+    a "{cps=35}This is how a sandstone looks under the microscope.{/cps}"
     a "{cps=35}{/cps}"
-    hide thin_section with dissolve
+    hide ts_wframe with dissolve
 
 #Review
 
