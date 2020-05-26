@@ -35,7 +35,7 @@ image ame_teach:
     repeat
 
 # Topic Covers
-    # What is a geologists?
+    # What is a geologist?
 image geo:
     "geo_1.jpg"
     .5
@@ -91,9 +91,15 @@ define b = Character(kind = centered, what_text_align = 0.0, what_color = "FFC53
 #other central text
 define c = Character(kind = centered, what_text_align = 0.0, what_color = "EDEBD7")
 
+
+################################################################################
+
+
 label start:
 
 # title card
+
+    jump carbonates
 
     play music "toy_piano.mp3"
 
@@ -274,12 +280,13 @@ label crystal_activity:
     \n
     3. Tie the string to pencils or sticks and hang one string in each jar\n
     \n
-    4. Place the jars in a couple different places in your house where they won't be bothered.  Don't touch them for several days\n
+    4. Place the jars in your house where they won't be bothered.  Don't touch them for several days\n
     \n
-    5. Wait several days.  This could take some time"
+    5. After several days lift the pencil to look for crystals."
 
     show ame_blink
-    a "{cps=35}Students - Look at your crystal growth. Did the crystals look different depending where they grew?{/cps}"
+    a "{cps=35}Students - Look at your crystal growth. What do you see?{/cps}"
+    a "{cps=35}These crystals grew as the water evaporated.  Does it look different from the sugar you first put in?{/cps}"
     hide ame_blink
 
 
@@ -289,7 +296,8 @@ label sedimentary:
     show sed
     " "
     scene bg plain
-    show mountain with dissolve
+    show ame_blink at left
+    show mountain behind ame_blink with dissolve
     a "{cps=35}Let's move on to sedimentary rocks. This looks like a good place to start.{/cps}"
     a "{cps=35}There are three main types of sedimentary rocks.  Clastics, carbonates and evaporites.{/cps}"
     a "{cps=35}We'll talk about clastic sedimentary rocks first.{/cps}"
@@ -300,9 +308,10 @@ label sedimentary:
     a "{cps=35}They can eventually become tiny pieces of sand or mud.{/cps}"
     hide mountain with dissolve
 
-#need a river scene
-    a "{cps=35}These grains can be transported downhill and are washed into streams and rivers{/cps}"
 
+    show river behind ame_blink with dissolve
+    a "{cps=35}These grains can be transported downhill and are washed into streams and rivers{/cps}"
+    hide river with dissolve
 
     show beach with dissolve
     a "{cps=35}Those rivers carry the grains unti they can be tranported here, the beach!{/cps}"
@@ -311,6 +320,7 @@ label sedimentary:
     a "{cps=35}Think of this like a bag of raisins or candy left in the back of your cupboard{/cps}"
     a "{cps=35}If you forget about them for awhile, they start to stick together, with each candy being an individual grain{/cps}"
     hide beach with dissolve
+    hide ame_blink with dissolve
 
     scene bg plain
     show ame_teach at left
@@ -363,8 +373,10 @@ label sed_layers:
     \n
     For this activity we will need the following supplies: \n
     \n
-    Clear empty plastic bottle with a lid \n
+    Clear empty plastic bottle or plastic jar with a lid \n
+    \n
     Water \n
+    \n
     A place to find different sized grains (dirt, sand, gravel)"
 
 
@@ -378,11 +390,13 @@ label sed_layers:
     \n
     4. Take the bottle outside and give it a good shake to mix everything up\n
     \n
-    5. Set the bottle down and wait."
+    5. Set the bottle down and wait 10 minutes."
 
-    show ame_blink
-    a "{cps=35}After a few minutes, look at your bottle.  Do you see layers?  What observations do you have about the layers?{/cps}"
+    show ame_blink at left with dissolve
+    show seds_activity at topright with dissolve
+    a "{cps=35}Look at the sediment in the bottle.  Do you see layers?  What observations do you have about the layers?{/cps}"
     hide ame_blink
+    hide seds_activity with dissolve
 
 
 
@@ -413,14 +427,18 @@ label carbonates:
     show met
     " "
     scene bg plain
+    show ame_blink at left
+    show meta_env behind ame_blink with dissolve
     a "{cps=35}Let's move on to the last type of rock, the metamorphic rocks!{/cps}"
     a "{cps=35}Metamorphic rocks are made when an existing rock is put under heat and pressure.{/cps}"
     a "{cps=35}Not enough heat to melt it like an igneous rock, but enough to change it{/cps}"
     a "{cps=35}The original rock can be igneous, sedimentary or even another metamorphic rock!{/cps}"
     a "{cps=35}How can we tell if a rock is metamorphic?{/cps}"
     a "{cps=35}Just like sedimentary rocks, they will often have layers or bands in them.{/cps}"
+    hide meta_env with dissolve
+    hide ame_blink with dissolve
 
-
+    show ame_teach at left
     show meta_wframe at topright behind ame_teach with dissolve
     a "{cps=35}Some of the differences are the minerals and what the bands look like.{/cps}"
     a "{cps=35}If you see a lot of shiny minerals, that could be a clue it is metamorhpic{/cps}"
@@ -504,12 +522,12 @@ label meta_layers:
     \n
     10. Press down on the top of the layers and squish them together.  What does it look like?\n
     \n
-    11. If you fold your layers in half, what does it look like now?\n
+    11. Fold your layers in half and squish. What does it look like now?\n
     \n
     12. Fold, flatten, twist and experiment with your layers to see how it changes."
 
-    show ame_blink
-    show meta_activity with dissolve
+    show ame_blink at left
+    show meta_activity behind ame_blink with dissolve
     a "{cps=35}Your metamorphic layers can be layered and folded.  What happened to the layers?  Do you still have your original colours or are new ones formed?{/cps}"
     a "{cps=35}Your original layers you built was like a sedimentary rock like in picture 1{/cps}"
     a "{cps=35}You then squished, folded and twisted the layers, which was acting like heat and pressure, changing the original rock{/cps}"
@@ -518,10 +536,48 @@ label meta_layers:
     hide meta_activity with dissolve
     hide ame blink
 
-
-label rock_cycle:
+################################################################################
 
 # rock cycle
+
+# Animated Images
+image melt:
+    "melt1.png"
+    1
+    "melt2.png"
+    1
+    repeat
+
+image xtal:
+    "xtal1.png"
+    1
+    "xtal2.png"
+    1
+    repeat
+
+image we:
+    "w&e1.png"
+    1
+    "w&e2.png"
+    1
+    repeat
+
+image hp:
+    "h&p1.png"
+    1
+    "h&p2.png"
+    1
+    repeat
+
+image cc:
+    "c&c1.png"
+    1
+    "c&c2.png"
+    1
+    repeat
+
+label rockcycle:
+
     show rc
     " "
 
@@ -530,29 +586,65 @@ label rock_cycle:
         xalign 0.5
         yalign 0.5
     a "{cps=35}Now that we understand the different kinds of rocks, then we can look into the steps that forms rocks.{/cps}"
-    a "{cps=35}Do you know that a rock could have been a metamorphic rock before it was a sedimentary rock?{/cps}"
-    a "{cps=35}or an igneous rock that used to be a metamorphic rock?{/cps}"
-    a "{cps=35}All of these are possible through repeated steps that rocks can go through{/cps}"
-    a "{cps=35}depending on what kind of the environment it is located in.{/cps}"
-    a "{cps=35}These steps are known as the rock cycle{/cps}"
+    a "{cps=35}The steps is called the rock cycle.{/cps}"
+    a "{cps=35}The rock cycle is like recycling of old rocks and turning it into new rocks.{/cps}"
+    a "{cps=35}This happens through repeated steps that rocks can go through depending on what kind of environment it is located in.{/cps}"
 
-    scene rockcycle
+label rock_cycle:
+    show screen rock_cycle
     hide ame_blink
     a "{cps=35}This diagram represents the rock cycle.{/cps}"
-    a "{cps=35}Repeated steps that a rock can go through.{/cps}"
-    a "{cps=35}We want to understand the basic steps that forms a rock.{/cps}"
-    a "{cps=35}Starting out with crystallization, as mentioned before, crystallization happens when a magma cools down{/cps}"
-    a "{cps=35}and becomes solid, which forms igneous rocks.{/cps}"
-    a "{cps=35}Whereas, the opposite of crystallization is melting where solid becomes liquid, turning back the rock back to magma.{/cps}"
-    a "{cps=35}While, heat and pressure occurs within the underground that is really deep down the Earth{/cps}"
-    a "{cps=35}Like we have learned, as we go deeper the Earth, the hotter a rock gets{/cps}"
-    a "{cps=35}and the deeper it gets, heavier objects accumulates above the rocks which causes the overlying pressure.{/cps}"
-    a "{cps=35}Another is weathering and erosion that breaks down rocks into pieces, called sediments{/cps}"
-    a "{cps=35}Then, the sediments goes through compaction and cementation like gluing objects together, that forms sedimentary rocks.{/cps}"
-    a "{cps=35}This steps can go several other ways and return back as controlled by the environment it is located in.{/cps}"
 
-    a "{cps=35}In conclusion the rock cycle is what gives rocks their different characteristics making the different places in Earth unique.{/cps}"
+label melting:
+    hide screen rock_cycle
+    show melt
 
+    "Melting is turning solid into liquid through high temperatures."
+    "This will cause the rock to turn into magma."
+
+    jump rock_cycle
+
+label crystallization:
+    hide screen rock_cycle
+    show xtal
+
+    "Crystallization is turning liquid into solid through cold temperatures."
+    "This is the cooling down of the rock which turns into igneous rock."
+
+    jump rock_cycle
+
+label heat_pressure:
+    hide screen rock_cycle
+    show hp
+
+    "As mentioned previously, we now know that as we go deeper into Earth's core the more heated the rocks get."
+    "as well as, the deeper it gets the more pressure is applied on the rock due to overlying mass above it."
+    "This then causes to form metamorphic rocks."
+
+    jump rock_cycle
+
+label weathering_erosion:
+    hide screen rock_cycle
+    show we
+
+    "Weathering and erosion is breaking down rocks into smaller pieces."
+    "We refer to these smaller pieces as sediments."
+
+    jump rock_cycle
+
+label compaction_cementation:
+    hide screen rock_cycle
+    show cc
+
+    "The sediments are small pieces of rocks caused by weathering and erosion."
+    "This can turn into sedimentary rocks by compaction and cementation,"
+    "like how we glue objects to stick them together."
+
+    jump rock_cycle
+
+
+
+################################################################################
 
 
     #Rock quiz?

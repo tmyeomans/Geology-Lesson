@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 287: indentation mismatch.
+File "game/script.rpy", line 311: end of line expected.
+    show river with dissolve behind ame_blink
+                             ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu May 21 20:35:01 2020
+Tue May 26 08:00:53 2020
