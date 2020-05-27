@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 311: end of line expected.
-    show river with dissolve behind ame_blink
-                             ^
+File "game/script.rpy", line 105: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation.
+    play music "toy_piano.mp3"
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue May 26 08:00:53 2020
+Wed May 27 14:26:49 2020

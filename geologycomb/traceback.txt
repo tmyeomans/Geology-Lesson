@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' 'xtal1.png'>:
-  File "game/script.rpy", line 603, in script
-    "Crystallization is turning liquid into solid through cold temperatures."
-IOError: Couldn't find file 'xtal1.png'.
+While loading <'Image' 'w&e1.png'>:
+  File "game/script.rpy", line 633, in script
+    
+IOError: Couldn't find file 'w&e1.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 603, in script
-    "Crystallization is turning liquid into solid through cold temperatures."
+  File "game/script.rpy", line 633, in script
+    
   File "C:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
@@ -72,9 +72,9 @@ Full traceback:
     surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
   File "C:\Renpy\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'xtal1.png'.
+IOError: Couldn't find file 'w&e1.png'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 GeoAdventures 1.0
-Tue May 26 08:10:30 2020
+Tue May 26 20:14:54 2020

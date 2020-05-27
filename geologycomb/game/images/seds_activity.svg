@@ -89,7 +89,7 @@
      inkscape:window-height="2066"
      id="namedview1401"
      showgrid="false"
-     inkscape:zoom="0.66019691"
+     inkscape:zoom="0.65670196"
      inkscape:cx="614.40002"
      inkscape:cy="345.60001"
      inkscape:window-x="2725"
@@ -99,7 +99,9 @@
   <g
      id="g1453"
      transform="translate(889.12866,792.18789)"
-     clip-path="url(#clipPath1457)">
+     clip-path="url(#clipPath1457)"
+     inkscape:export-xdpi="62.094002"
+     inkscape:export-ydpi="62.094002">
     <image
        transform="matrix(1.2525977,0,0,1.2525977,93.792966,-1851.2492)"
        clip-path="url(#clipPath1445)"
@@ -38582,5 +38584,7 @@ AAAAAACABUYACAAAAAAAACyw/wdfqfBABPE2ZQAAAABJRU5ErkJggg==
 "
      id="image1407"
      x="0"
-     y="0" />
+     y="0"
+     inkscape:export-xdpi="62.094002"
+     inkscape:export-ydpi="62.094002" />
 </svg>

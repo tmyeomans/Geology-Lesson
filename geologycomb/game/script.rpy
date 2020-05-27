@@ -99,12 +99,13 @@ label start:
 
 # title card
 
-    jump carbonates
 
     play music "toy_piano.mp3"
 
-
     scene title
+
+#scene for conditions of use
+
 
     scene bg plain
     show ame_blink:
@@ -210,10 +211,10 @@ label start:
     scene magma
     show ame_blink at left
 
-    a "{cps=35}Igneous rocks are formed by melting existing rocks deep underground{/cps}"
-    a "{cps=35}Eventually these rocks start melting until they become a liquid we call magma{/cps}"
+    a "{cps=35}Igneous rocks are formed by heating existing rocks deep underground{/cps}"
+    a "{cps=35}Eventually these rocks melt and become a liquid we call magma{/cps}"
     a "{cps=35}Depending on the type of magma, it can reach over 1500 degrees Celcius!{/cps}"
-    a "{cps=35}Once the rock is a magma, this liquid rock can move, and eventually it will cool down{/cps}"
+    a "{cps=35}This liquid rock can move, and will eventually move away from the heat and cool down{/cps}"
     a "{cps=35}This magma can cool very quickly or very slowly{/cps}"
     a "{cps=35}How do you think magma could cool quickly?{/cps}"
 
@@ -224,6 +225,7 @@ label start:
     hide volc_photo with dissolve
 
 
+    #magma cool slowly image
     scene bg plain
     show ame_blink at left
     a "{cps=35}Magma can cool slowly by moving away from a heat source and by staying underground{/cps}"
@@ -259,7 +261,7 @@ label crystal_activity:
 
 
     b "{b} ACTIVITY TIME{/b}"
-    b "We can grow crystals at home \n
+    b "{b}We can grow crystals at home{/b} \n
     \n
     For this activity we will need the following supplies: \n
     4 cups of sugar \n
@@ -270,13 +272,14 @@ label crystal_activity:
 
 
     b "Once you have all of your materials and an {u}adult{/u} to help, you are ready to start growing your crystals \n
-    {u}Adults will need to do all of the steps while the students can watch{/u}
+    \n
+    {u}Adults will need to do all of the steps while the students can watch{/u}\n
     \n
     1. Boil the water on the stove and slowly add the sugar to it, stirring the whole time\n
     \n
-    2. Once all the sugar is dissolved, remove it from the heat.\n
+    2. Once all the sugar is dissolved, remove it from the heat.  Allow the liquid to cool a little.\n
     \n
-    3. Allow the sugar solution to cool a little before putting the liquid in the jars.  At this point you can add a drop of food colouring to the jar if you like\n
+    3. Put the liquid in the jars. You can add food colouring to the jar if you like\n
     \n
     3. Tie the string to pencils or sticks and hang one string in each jar\n
     \n
@@ -284,10 +287,13 @@ label crystal_activity:
     \n
     5. After several days lift the pencil to look for crystals."
 
-    show ame_blink
+    show ame_blink at left
+    show crystal_activity at topright behind ame_blink with dissolve
     a "{cps=35}Students - Look at your crystal growth. What do you see?{/cps}"
     a "{cps=35}These crystals grew as the water evaporated.  Does it look different from the sugar you first put in?{/cps}"
+    a "{cps=35}My sugar crystals look bigger than sugar we first added!{/cps}"
     hide ame_blink
+    hide crystal_activity with dissolve
 
 
 
@@ -313,11 +319,11 @@ label sedimentary:
     a "{cps=35}These grains can be transported downhill and are washed into streams and rivers{/cps}"
     hide river with dissolve
 
-    show beach with dissolve
-    a "{cps=35}Those rivers carry the grains unti they can be tranported here, the beach!{/cps}"
+    show beach behind ame_blink with dissolve
+    a "{cps=35}Those rivers carry the grains until they can be tranported here, the beach!{/cps}"
     a "{cps=35}From there the grains can make their way underwater{/cps}"
     a "{cps=35}Grains can stack up on one another, with enough pressure to eventually squish them together, making a rock{/cps}"
-    a "{cps=35}Think of this like a bag of raisins or candy left in the back of your cupboard{/cps}"
+    a "{cps=35}Think of it like a bag of raisins or candy left in the back of your cupboard{/cps}"
     a "{cps=35}If you forget about them for awhile, they start to stick together, with each candy being an individual grain{/cps}"
     hide beach with dissolve
     hide ame_blink with dissolve
@@ -328,7 +334,8 @@ label sedimentary:
 
 
     show cgl_wframe at topright behind ame_teach with dissolve
-    a "{cps=35}This is a conglomerate.  Look at how big the grains, or clasts are in this example{/cps}"
+    a "{cps=35}This is a conglomerate.  Look at how big the grains are in this example{/cps}"
+    a "{cps=35}Some of the grains are as big as the quarter in the picture. {/cps}"
     hide cgl_wframe with dissolve
 
     show sandstone_wframe at topright behind ame_teach with dissolve
@@ -337,7 +344,7 @@ label sedimentary:
     hide sandstone_wframe with dissolve
 
     show silt_wframe at topright behind ame_teach with dissolve
-    a "{cps=35}Some sedimentary rocks have grains so small you can't really see them{/cps}"
+    a "{cps=35}Some sedimentary rocks have grains so small you can't really see them with just your eyes{/cps}"
     a "{cps=35}These are called siltstones or shales{/cps}"
     a "{cps=35}This is an example of a siltstone.  If you look really really close you can see some grains.  If you couldn't you would call it a shale{/cps}"
     hide silt_wframe with dissolve
@@ -369,7 +376,7 @@ label sed_layers:
 
 
     b "{b} ACTIVITY TIME{/b}"
-    b "We can see how sedimentary rock layers are formed \n
+    b "{b}We can see how sedimentary rock layers are formed{/b} \n
     \n
     For this activity we will need the following supplies: \n
     \n
@@ -395,6 +402,7 @@ label sed_layers:
     show ame_blink at left with dissolve
     show seds_activity at topright with dissolve
     a "{cps=35}Look at the sediment in the bottle.  Do you see layers?  What observations do you have about the layers?{/cps}"
+    a "{cps=35}These pictures show my sediment all mixed up before I added the water, and the layers after adding water, shaking it, and letting it rest{/cps}"
     hide ame_blink
     hide seds_activity with dissolve
 
@@ -403,7 +411,7 @@ label sed_layers:
 label carbonates:
     scene bg plain
     show ame_teach at left
-
+    #draw coral reef with snails and shells
     a "{cps=35}Another type of sedimentary rocks we call carbonate rocks{/cps}"
     a "{cps=35}These sedimentary rocks are made by from the fossilized bodies of sea creatures{/cps}"
     a "{cps=35}Sometimes you can see the fossils in the rocks, sometimes you can't{/cps}"
@@ -415,14 +423,18 @@ label carbonates:
 
     show limemud_wframe at topright behind ame_teach with dissolve
     a "{cps=35}Not all carbonate rocks have fossils{/cps}"
-    a "{cps=35}In this example you have the same carbonate that makes up shell material instead making mud to form the carbonate rock{/cps}"
+    a "{cps=35}In this example you have the same carbonate that is found in shells instead making mud to form the rock{/cps}"
     hide limemud_wframe with dissolve
+
+    #draw lake evaporating?
 
     show evap_wframe at topright behind ame_teach with dissolve
     a "{cps=35}The last type of sedimentary rocks are called evaporites{/cps}"
     a "{cps=35}These sedimentary rocks are formed when water evaporates from a body of water{/cps}"
     a "{cps=35}Salt is an example of an evaporitic rock.  Geologists call it halite.{/cps}"
     hide evap_wframe with dissolve
+
+
 #Metamorphic Rocks
     show met
     " "
@@ -441,13 +453,14 @@ label carbonates:
     show ame_teach at left
     show meta_wframe at topright behind ame_teach with dissolve
     a "{cps=35}Some of the differences are the minerals and what the bands look like.{/cps}"
-    a "{cps=35}If you see a lot of shiny minerals, that could be a clue it is metamorhpic{/cps}"
+    a "{cps=35}If you see a lot of shiny minerals, that could be a clue it is metamorphic{/cps}"
     a "{cps=35}If the layers or bands are not straight but wiggly, that could be a clue it is metamorhpic{/cps}"
 
     hide meta_wframe with dissolve
 
     show meta2_wframe at topright behind ame_teach with dissolve
     a "{cps=35}Here is another metamorphic rock{/cps}"
+    a "{cps=35}It looks kind of like the siltstone we saw earlier but it has more shiny minerals{/cps}"
     hide meta2_wframe with dissolve
 
     hide ame_teach
@@ -474,7 +487,7 @@ label meta_layers:
 
 
     b "{b} ACTIVITY TIME{/b}"
-    b "We can see how metamorphic rock layers are formed\n
+    b "{b}We can see how metamorphic rock layers are formed{/b}\n
     \n
     For this activity we will be using modelling clay.\n
     \n
@@ -531,6 +544,7 @@ label meta_layers:
     a "{cps=35}Your metamorphic layers can be layered and folded.  What happened to the layers?  Do you still have your original colours or are new ones formed?{/cps}"
     a "{cps=35}Your original layers you built was like a sedimentary rock like in picture 1{/cps}"
     a "{cps=35}You then squished, folded and twisted the layers, which was acting like heat and pressure, changing the original rock{/cps}"
+    a "{cps=35}By the time I got to picture 4, I saw bands of colours and new colours.{/cps}"
     a "{cps=35}New colours forming is like new metamorphic minerals forming from the heat and pressure requried to make the rocks{/cps}."
     a "{cps=35}How is this different from the sedimentary rocks?{/cps}"
     hide meta_activity with dissolve
@@ -650,7 +664,6 @@ label compaction_cementation:
     #Rock quiz?
     #How to see inside the earth
     #Drilling
-    #Seismic
     #Mapping
 
 
@@ -664,19 +677,28 @@ label scale:
     show mountains_from_air at right
     a "{cps=35}Sometimes they look at entire mountain ranges to understand what the past looked like in an area{/cps}"
     hide mountains_from_air with dissolve
-    #add photo of rock in hand
     a "{cps=35}Sometimes they look at rocks they can hold in their hand to tell them about properties of the rocks themselves{/cps}"
 
-    show ts_wframe at topright behind ame_blink with dissolve
+
+    show ts_2 at topleft behind ame_blink with dissolve
     a "{cps=35}And sometimes they use microscopes to look at rocks to understand more about the grains and the spaces between the grains{/cps}"
-    a "{cps=35}This is how a sandstone looks under the microscope.{/cps}"
-    a "{cps=35}{/cps}"
+    a "{cps=35}This is a microscope slide with a very thin slice of rock. {/cps}"
+    show ts_wframe at topright behind ame_blink with dissolve
+    a "{cps=35}  And this is how a sandstone looks under the microscope.{/cps}"
+
     hide ts_wframe with dissolve
+    hide ts_2
+
+
+
+    a "{cps=35}{/cps}"
 
 #Review
 
 
-#Other resources
+
+
+
 
 
 
