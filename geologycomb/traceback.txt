@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' 'w&e1.png'>:
-  File "game/script.rpy", line 633, in script
-    
-IOError: Couldn't find file 'w&e1.png'.
+While processing text tag {cps} in u"{cps=35}And sometimes you can't because the fossils are broken up into small pieces like the clastic rocks.{cps}".:
+  File "game/script.rpy", line 419, in script
+    a "{cps=35}And sometimes you can't because the fossils are broken up into small pieces like the clastic rocks.{cps}"
+Exception: empty value supplied for tag u'cps'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 633, in script
-    
+  File "game/script.rpy", line 419, in script
+    a "{cps=35}And sometimes you can't because the fossils are broken up into small pieces like the clastic rocks.{cps}"
   File "C:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
@@ -50,31 +50,39 @@ Full traceback:
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
     rv = d.render(widtho, heighto, st, at)
-  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\image.py", line 500, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\image.py", line 306, in wrap_render
-    rend = render(child, w, h, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 675, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
   File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
     rv = d.render(widtho, heighto, st, at)
-  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\im.py", line 583, in render
-    return cache.get(self, render=True)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\im.py", line 266, in get
-    surf = image.load()
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\im.py", line 628, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "C:\Renpy\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'w&e1.png'.
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 1127, in render
+    st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 1996, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 597, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 1159, in segment
+    raise Exception("empty value supplied for tag %r" % tag)
+Exception: empty value supplied for tag u'cps'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 GeoAdventures 1.0
-Tue May 26 20:14:54 2020
+Thu May 28 09:03:48 2020

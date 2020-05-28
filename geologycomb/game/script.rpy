@@ -312,6 +312,7 @@ label sedimentary:
     a "{cps=35}Eventually this breaks the rock apart into pieces{/cps}"
     a "{cps=35}Those pieces may start off huge, but those pieces are also worn down{/cps}"
     a "{cps=35}They can eventually become tiny pieces of sand or mud.{/cps}"
+    a "{cps=35}These tiny pieces of rocks have different names.  We call them grains, clasts or sediment.{/cps}"
     hide mountain with dissolve
 
 
@@ -411,10 +412,13 @@ label sed_layers:
 label carbonates:
     scene bg plain
     show ame_teach at left
-    #draw coral reef with snails and shells
+    show reef at topright behind ame_teach with dissolve
     a "{cps=35}Another type of sedimentary rocks we call carbonate rocks{/cps}"
-    a "{cps=35}These sedimentary rocks are made by from the fossilized bodies of sea creatures{/cps}"
-    a "{cps=35}Sometimes you can see the fossils in the rocks, sometimes you can't{/cps}"
+    a "{cps=35}These sedimentary rocks are formed under water.  A coral reef is a good place to form carbonate rocks.{/cps}"
+    a "{cps=35}Carbonates are made up of the fossilized bodies of sea creatures{/cps}"
+    a "{cps=35}Sometimes you can see the fossils in the rocks.{/cps}"
+    a "{cps=35}And sometimes you can't because the fossils are broken up into small pieces like the clastic rocks.{/cps}"
+    hide reef with dissolve
 
     show coral_wframe at topright behind ame_teach with dissolve
     a "{cps=35}This is an example of a carbonate rock where you can see the fossils{/cps}"
@@ -422,16 +426,17 @@ label carbonates:
     hide coral_wframe with dissolve
 
     show limemud_wframe at topright behind ame_teach with dissolve
-    a "{cps=35}Not all carbonate rocks have fossils{/cps}"
+
     a "{cps=35}In this example you have the same carbonate that is found in shells instead making mud to form the rock{/cps}"
     hide limemud_wframe with dissolve
 
-    #draw lake evaporating?
+
 
     show evap_wframe at topright behind ame_teach with dissolve
     a "{cps=35}The last type of sedimentary rocks are called evaporites{/cps}"
     a "{cps=35}These sedimentary rocks are formed when water evaporates from a body of water{/cps}"
     a "{cps=35}Salt is an example of an evaporitic rock.  Geologists call it halite.{/cps}"
+    a "{cps=35}Look really closely the next time you use salt at the dinner table.  What does it look like up close?{/cps}"
     hide evap_wframe with dissolve
 
 
@@ -452,8 +457,8 @@ label carbonates:
 
     show ame_teach at left
     show meta_wframe at topright behind ame_teach with dissolve
-    a "{cps=35}Some of the differences are the minerals and what the bands look like.{/cps}"
-    a "{cps=35}If you see a lot of shiny minerals, that could be a clue it is metamorphic{/cps}"
+    a "{cps=35}Some of the differences are the minerals you can find in it and what the bands look like.{/cps}"
+    a "{cps=35}If you see a lot of shiny minerals, that could be a clue that your rock is metamorphic{/cps}"
     a "{cps=35}If the layers or bands are not straight but wiggly, that could be a clue it is metamorhpic{/cps}"
 
     hide meta_wframe with dissolve
@@ -666,6 +671,20 @@ label compaction_cementation:
     #Drilling
     #Mapping
 
+label mapping:
+
+
+    scene bg plain
+    show ame_blink at left
+    show map at topright  behind ame_blink with dissolve
+    a "{cps=35}Many geologists take all the data they get from rocks and put them on a map.{/cps}"
+    a "{cps=35}These maps can help geologists think about the subsurface in three dimensions{/cps}"
+    a "{cps=35}These maps can help geologists understand the past, and know where resouces or hazards may occur.{/cps}"
+    hide map with dissolve
+
+
+
+
 
 label scale:
 
@@ -684,7 +703,10 @@ label scale:
     a "{cps=35}And sometimes they use microscopes to look at rocks to understand more about the grains and the spaces between the grains{/cps}"
     a "{cps=35}This is a microscope slide with a very thin slice of rock. {/cps}"
     show ts_wframe at topright behind ame_blink with dissolve
-    a "{cps=35}  And this is how a sandstone looks under the microscope.{/cps}"
+    a "{cps=35}And this is how a sandstone looks under the microscope.{/cps}"
+    a "{cps=35}When you go exploring, try and look at things up really, really close AND look at things from far away.{/cps}"
+    a "{cps=35}That way you can get a better picture overall of how things look.{/cps}"
+
 
     hide ts_wframe with dissolve
     hide ts_2
@@ -695,11 +717,14 @@ label scale:
 
 #Review
 
+label ending:
 
-
-
-
-
-
+#add major takeaways - ask questions, explore your world, be curious, etc.
+    a "{cps=35}This ends our adventure today{/cps}"
+    a "{cps=35}I hope you had fun and learned something new{/cps}"
+    a "{cps=35}{/cps}"
+    a "{cps=35}{/cps}"
+    a "{cps=35}{/cps}"
+    a "{cps=35}{/cps}"
 
 return
