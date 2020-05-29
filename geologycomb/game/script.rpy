@@ -83,6 +83,27 @@ image rc:
     .5
     repeat
 
+image review:
+    "review_1"
+    .5
+    "review_2"
+    .5
+    repeat
+
+image inside:
+    "inside_1"
+    .5
+    "inside_2"
+    .5
+    repeat
+
+image scale:
+    "scale_1"
+    .5
+    "scale_2"
+    .5
+    repeat
+
 define a = Character("Amethyst")
 
 #activity text
@@ -104,7 +125,7 @@ label start:
 
     scene title
 
-#scene for conditions of use
+# scene for conditions of use
     scene bg plain
 
 
@@ -512,7 +533,7 @@ label carbonates:
         "Let's do the activity now!":
             jump meta_layers
         "I'll do the activity later!":
-            jump rock_cycle
+            jump rockcycle
 
 
 
@@ -650,8 +671,8 @@ label melting:
     hide screen rock_cycle
     show melt
 
-    "Melting is turning solid into liquid through high temperatures."
-    "This will cause the rock to turn into magma."
+    "{cps=35}Melting is turning solid into liquid through high temperatures.{/cps}"
+    "{cps=35}This will cause the rock to turn into magma.{/cps}"
 
     jump rock_cycle
 
@@ -659,8 +680,8 @@ label crystallization:
     hide screen rock_cycle
     show xtal
 
-    "Crystallization is turning liquid into solid through cold temperatures."
-    "This is the cooling down of the rock which turns into igneous rock."
+    "{cps=35}Crystallization is turning liquid into solid through cold temperatures.{/cps}"
+    "{cps=35}This is the cooling down of the rock which turns into igneous rock.{/cps}"
 
     jump rock_cycle
 
@@ -668,9 +689,9 @@ label heat_pressure:
     hide screen rock_cycle
     show hp
 
-    "As mentioned previously, we now know that as we go deeper into Earth's core the more heated the rocks get."
-    "as well as, the deeper it gets the more pressure is applied on the rock due to overlying mass above it."
-    "This then causes to form metamorphic rocks."
+    "{cps=35}As mentioned previously, we now know that as we go deeper into Earth's core the more heated the rocks get.{/cps}"
+    "{cps=35}as well as, the deeper it gets the more pressure is applied on the rock due to overlying mass above it.{/cps}"
+    "{cps=35}This then causes to form metamorphic rocks.{/cps}"
 
     jump rock_cycle
 
@@ -678,8 +699,8 @@ label weathering_erosion:
     hide screen rock_cycle
     show we
 
-    "Weathering and erosion is breaking down rocks into smaller pieces."
-    "We refer to these smaller pieces as sediments."
+    "{cps=35}Weathering and erosion is breaking down rocks into smaller pieces.{/cps}"
+    "{cps=35}We refer to these smaller pieces as sediments.{/cps}"
 
     jump rock_cycle
 
@@ -687,9 +708,9 @@ label compaction_cementation:
     hide screen rock_cycle
     show cc
 
-    "The sediments are small pieces of rocks caused by weathering and erosion."
-    "This can turn into sedimentary rocks by compaction and cementation,"
-    "like how we glue objects to stick them together."
+    "{cps=35}The sediments are small pieces of rocks caused by weathering and erosion.{/cps}"
+    "{cps=35}This can turn into sedimentary rocks by compaction and cementation,{/cps}"
+    "{cps=35}like how we glue objects to stick them together.{/cps}"
 
     jump rock_cycle
 
@@ -697,14 +718,219 @@ label compaction_cementation:
 
 ################################################################################
 
+#Rock quiz
 
-    #Rock quiz?
-    #How to see inside the earth
-    #Drilling
-    #Mapping
+label rock_quiz:
+
+    hide screen rock_cycle
+
+    show review
+    " "
+    scene bg plain
+    show ame_blink at left
+
+    a "{cps=35}I hope you have a better understanding of what geology is and familiar with different types of rocks.{/cps}"
+    a "{cps=35}Therefore, I have prepared a short quiz to review what we have learned so far!{/cps}"
+
+label question_1:
+
+    show screen question_1
+
+    a "{cps=35}Which of the following is not a type of rock? (Click on the answer){/cps}"
+    a "Which of the following is not a type of rock? (Click on the answer)"
+    a "Which of the following is not a type of rock? (Click on the answer)"
+    a "Which of the following is not a type of rock? (Click on the answer)"
+
+label question_1_answer:
+    a "{cps=35}That is correct! The three main types of rock are Igneous, Sedimentary and Metamorphic rocks{/cps}"
+
+label question_2:
+
+    hide screen question_1
+    scene bg plain
+    scene bg plain
+    show ame_blink at left
+    show intrusiveig_wframe with dissolve:
+        size(622, 350)
+        xalign .5
+        yalign 0
+    show screen question_2
+
+    a "{cps=35}What type or rock is formed by cooling down the magma?{/cps}"
+    a "What type or rock is formed by cooling down the magma?"
+    a "What type or rock is formed by cooling down the magma?"
+    a "What type or rock is formed by cooling down the magma?"
+
+
+label question_2_answer:
+
+    a "{cps=35}Great job! Igneous rocks forms from magma that has cooled down and turned into solid which is a process called crystallization.{/cps}"
+
+label question_3:
+
+    hide screen question_2
+    scene bg plain
+    show ame_blink at left
+    show coral_wframe with dissolve:
+        size(622, 350)
+        xalign .5
+        yalign 0
+    show screen question_3
+
+    a "{cps=35}Fill in the blank: The carbonate sedimentary rock forms under _________.{/cps}"
+    a "Fill in the blank: The carbonate sedimentary rock forms under _________."
+    a "Fill in the blank: The carbonate sedimentary rock forms under _________."
+    a "Fill in the blank: The carbonate sedimentary rock forms under _________."
+
+label question_3_answer:
+
+    a "{cps=35}That is right! The carbonate seimentary rock are formed from fossilized bodies of sea creatures found under water.{/cps}"
+
+label question_4:
+
+    hide screen question_3
+    scene bg plain
+    show ame_blink at left
+    show tle 2 with dissolve:
+        size(622, 350)
+        xalign .5
+        yalign 0
+    show screen question_4
+
+    a "{cps=35}Which layer of Earth is composed of two sections and is made out of iron alloy?{/cps}"
+    a "Which layer of Earth is composed of two sections and is made out of iron alloy?"
+    a "Which layer of Earth is composed of two sections and is made out of iron alloy?"
+    a "Which layer of Earth is composed of two sections and is made out of iron alloy?"
+
+
+label question_4_anwser:
+
+    a "{cps=35}Doing great so far! Yes, The core is made out of iron alloy and has two parts which are the outer core and inner core.{/cps}"
+
+label question_5:
+
+    hide screen question_4
+    scene bg plain
+    show ame_blink at left
+    show meta2_wframe with dissolve:
+        size(622, 350)
+        xalign .5
+        yalign 0
+    show screen question_5
+
+    a "{cps=35}Onto the last question!{/cps}"
+    a "{cps=35}Which type of rock is formed by heat and pressure?{/cps}"
+    a "Which type of rock is formed by heat and pressure?"
+    a "Which type of rock is formed by heat and pressure?"
+    a "Which type of rock is formed by heat and pressure?"
+
+
+label question_5_answer:
+
+    a "{cps=35}Yes! The answer is metamorphic rock. Metamorphic rock forms under pressure from overlying mass, which often forms the banded feature.{/cps}"
+    a "{cps=35}while the increasing heat can form shiny minerals, which is distinctive of metamorphic rocks.{/cps}"
+    a "{cps=35}Amazing job on getting all the correct answers!{/cps}"
+    a "{cps=35}We will now continue on to next topics.{/cps}"
+
+################################################################################
+
+# How to see inside the earth
+
+# Animated images
+image drilling:
+    "dr_1.png"
+    .5
+    "dr_2.png"
+    .5
+    "dr_3.png"
+    .5
+    "dr_4.png"
+    .5
+    "dr_5.png"
+    .5
+    repeat
+
+label inside_earth:
+
+    hide screen question_5
+
+    show inside
+    " "
+
+    scene bg plain
+    show earth:
+        size(889, 500)
+        xalign .5
+        yalign 0
+    show ame_blink at left
+
+    a "{cps=35}Now that we have covered what geology is and what rocks are. We now want to understand the application of geology to real world.{/cps}"
+    a "{cps=35}Geologists are interested with the data that rocks provide.{/cps}"
+    a "{cps=35}Geologists analyze the data and make an interpretation to optimize the information of the rocks, which then is used to solve real life problems.{/cps}"
+    a "{cps=35}But before analyzing the rocks, geologists need to obtain the data and see what is inside the Earth.{/cps}"
+    a "{cps=35}Many methods are used to obtain and record data from inside the Earth,{/cps}"
+    a "{cps=35}some of which are drilling, observing outcrop and mapping.{/cps}"
+
+# Drilling
+
+label drilling:
+
+    scene bg plain
+    show ame_blink at left
+
+    a "{cps=35}By drilling, geologists are able to collect rock samples from the subsurface that they can observe and analyze.{/cps}"
+
+    show drilling with dissolve:
+        size(711, 400)
+        xalign .5
+        yalign 0.2
+    show ame_blink at left
+
+    a "{cps=35}To drill, the common method is using an equipment such as a drilling rig{/cps}"
+    a "{cps=35}What a drilling rig does is it will make a hole into the ground and drill down the subsurface.{/cps}"
+    a "{cps=35}Then, after reaching a desired depth, a rock sample is extracted within a protective case{/cps}"
+
+    hide drilling
+    show core_wframe with dissolve:
+        size(300, 450)
+        xalign .5
+        yalign 0.2
+    show ame_teach at left
+
+
+    a "{cps=35}These rock samples are also referred to as cores that provides a physical evidence that geologists use to observe and record detailed properties within the subsurface.{/cps}"
+
+# Outcrop
+
+label outcrop:
+
+    scene bg plain
+    show outcrop with dissolve:
+        size(300, 450)
+        xalign .5
+        yalign 0.2
+    show ame_teach at left
+
+
+    a "{cps=35}Another method is by observing outcrops. Outcrops are defined as exposed bodies of rocks.{/cps}"
+    a "{cps=35}This is when geologists go out on the field to observe and collect data from the outcrop.{/cps}"
+
+    hide outcrop
+    hide ame_blink
+    show fieldnotes with dissolve:
+        size(711, 400)
+        xalign .5
+        yalign 0.2
+    show ame_blink at left
+
+    a "{cps=35}On the field, geologists uses field notebooks which serves like a journal where they record every detail they observe on site.{/cps}"
+    a "{cps=35}Therefore, even after geologists have no access to the site, they can go back to their notes to recall what they saw.{/cps}"
+    a "{cps=35}This is very important when geologists tries to put the pieces together to make sense of the data to be able to analyze effectively.{/cps}"
+    a "{cps=35}These recorded data from the outcrop help geologists understand the environment, composition and geological structures in three dimensions.{/cps}"
+
+#Mapping
 
 label mapping:
-
 
     scene bg plain
     show ame_blink at left
@@ -714,11 +940,10 @@ label mapping:
     a "{cps=35}These maps can help geologists understand the past, and know where resouces or hazards may occur.{/cps}"
     hide map with dissolve
 
-
-
-
-
 label scale:
+
+    show scale
+    " "
 
     scene bg plain
     show ame_blink

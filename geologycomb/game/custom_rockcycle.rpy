@@ -42,7 +42,7 @@ screen rock_cycle:
         yalign 0.85
 
     textbutton "DONE":
-        action Jump("scale")
+        action Jump("rock_quiz")
         hovered SetVariable("bg_toggle", True)
         unhovered SetVariable("bg_toggle", False)
         xalign 1
