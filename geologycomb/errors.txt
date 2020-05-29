@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 105: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation.
-    play music "toy_piano.mp3"
+File "game/script.rpy", line 110: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
+    menu:
     ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed May 27 14:26:49 2020
+Thu May 28 17:09:48 2020

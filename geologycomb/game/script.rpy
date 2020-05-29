@@ -105,6 +105,33 @@ label start:
     scene title
 
 #scene for conditions of use
+    scene bg plain
+
+
+    c "Welcome to the geoadventure!  On the next screen you'll get to choose how to proceed.\n
+    \n
+    If this is your first time, select the lesson.\n
+    \n
+    If you're coming back for an activity you missed, follow the shortcut to the activity you want."
+
+    menu:
+
+
+        "I want to follow the lesson!":
+            jump lesson
+        "I'm coming back to make crystals!":
+            jump crystal_activity
+        "I'm coming back to make sedimentary layers!":
+            jump sed_layers
+        "I'm coming back to explore metamorphic changes with clay!":
+            jump meta_layers
+
+
+
+
+
+
+label lesson:
 
 
     scene bg plain
@@ -116,6 +143,11 @@ label start:
     a "{cps=35}I am Amethyst and I will be joining you today to go through the wonders of geology{/cps}"
     a "{cps=35}From unfolding 4.5 billion years history of Earth to putting resources to practical use{/cps}"
     a "{cps=35}We will explore and learn what geology is.{/cps}"
+
+
+
+
+
 
     hide ame_blink
     show qtz_4:
@@ -260,7 +292,7 @@ label start:
 label crystal_activity:
 
 
-    b "{b} ACTIVITY TIME{/b}"
+    b "{b} CRYSTAL ACTIVITY TIME{/b}"
     b "{b}We can grow crystals at home{/b} \n
     \n
     For this activity we will need the following supplies: \n
@@ -376,7 +408,7 @@ label sedimentary:
 label sed_layers:
 
 
-    b "{b} ACTIVITY TIME{/b}"
+    b "{b}SEDIMENTARY LAYERS ACTIVITY TIME{/b}"
     b "{b}We can see how sedimentary rock layers are formed{/b} \n
     \n
     For this activity we will need the following supplies: \n
@@ -491,7 +523,7 @@ label carbonates:
 label meta_layers:
 
 
-    b "{b} ACTIVITY TIME{/b}"
+    b "{b}METAMORPHIC CHANGES ACTIVITY TIME{/b}"
     b "{b}We can see how metamorphic rock layers are formed{/b}\n
     \n
     For this activity we will be using modelling clay.\n
