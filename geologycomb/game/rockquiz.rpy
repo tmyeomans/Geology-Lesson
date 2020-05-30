@@ -18,11 +18,13 @@ screen question_1:
         textbutton "c. Sedimentary Rock":
             action Notify("Incorrect! Try again.")
 
+
     frame:
         xalign 0.5 ypos 450
 
         textbutton "d. Metamorphic Rock":
             action Notify("Incorrect! Try again.")
+
 
 screen question_2:
 
@@ -38,11 +40,13 @@ screen question_2:
         textbutton "b. Sedimentary Rock":
             action Notify("Incorrect! Try again.")
 
+
     frame:
         xalign 0.5 ypos 450
 
         textbutton "c. Metamorphic Rock":
             action Notify("Incorrect! Try again.")
+
 
 
 screen question_3:
@@ -52,6 +56,7 @@ screen question_3:
 
         textbutton "a. pressure":
             action Notify("Incorrect! Try again.")
+
 
     frame:
         xalign 0.5 ypos 400
@@ -65,6 +70,7 @@ screen question_3:
         textbutton "c. soil":
             action Notify("Incorrect! Try again.")
 
+
 screen question_4:
 
     frame:
@@ -73,11 +79,13 @@ screen question_4:
         textbutton "a. Mantle":
             action Notify("Incorrect! Try again.")
 
+
     frame:
         xalign 0.5 ypos 400
 
         textbutton "b. Asthenosphere":
             action Notify("Incorrect! Try again.")
+
 
     frame:
         xalign 0.5 ypos 450
@@ -93,11 +101,13 @@ screen question_5:
         textbutton "a. Igneous Rock":
             action Notify("Incorrect! Try again.")
 
+
     frame:
         xalign 0.5 ypos 400
 
         textbutton "b. Sedimentary Rock":
             action Notify("Incorrect! Try again.")
+
 
     frame:
         xalign 0.5 ypos 450

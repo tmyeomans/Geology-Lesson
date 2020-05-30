@@ -179,7 +179,9 @@ label lesson:
     a "{cps=35}but that's what I think makes geology so exciting!{/cps}"
 
     show geo
-    ""
+    window hide
+    pause
+
 # what is a geologists/geoscientists? What do they study?
 
 
@@ -227,8 +229,11 @@ label lesson:
 
 
 # layers of the earth
+
     show layers
-    ""
+    window hide
+    pause
+
     scene bg plain
     show ame_blink:
         xalign 0.5
@@ -260,7 +265,9 @@ label lesson:
 
 #Igneous Rocks
     show ign
-    " "
+    window hide
+    pause
+
     scene magma
     show ame_blink at left
 
@@ -353,7 +360,9 @@ label crystal_activity:
 label sedimentary:
 #Sedimentary Rocks
     show sed
-    " "
+    window hide
+    pause
+
     scene bg plain
     show ame_blink at left
     show mountain behind ame_blink with dissolve
@@ -495,7 +504,9 @@ label carbonates:
 
 #Metamorphic Rocks
     show met
-    " "
+    window hide
+    pause
+
     scene bg plain
     show ame_blink at left
     show meta_env behind ame_blink with dissolve
@@ -651,7 +662,8 @@ image cc:
 label rockcycle:
 
     show rc
-    " "
+    window hide
+    pause
 
     scene bg plain
     show ame_blink:
@@ -662,58 +674,62 @@ label rockcycle:
     a "{cps=35}The rock cycle is like recycling of old rocks and turning it into new rocks.{/cps}"
     a "{cps=35}This happens through repeated steps that rocks can go through depending on what kind of environment it is located in.{/cps}"
 
-label rock_cycle:
-    show screen rock_cycle
+
     hide ame_blink
+    show rc_base:
+        size(889, 500)
+        xalign 0.5
+        yalign 0
     a "{cps=35}This diagram represents the rock cycle.{/cps}"
+    a "{cps=35}The following are the major processes that occurs during a rock cycle:{/cps}"
 
-label melting:
-    hide screen rock_cycle
-    show melt
+    hide rc_base
+    show melt:
+        size(889, 500)
+        xalign 0.5
+        yalign 0
+    a "{cps=35}Melting occurs during hot temperatures, which turn solids into liquids.{/cps}"
+    a "{cps=35}This will cause the rock to turn into magma.{/cps}"
 
-    "{cps=35}Melting is turning solid into liquid through high temperatures.{/cps}"
-    "{cps=35}This will cause the rock to turn into magma.{/cps}"
+    hide melt
+    show xtal:
+        size(889, 500)
+        xalign 0.5
+        yalign 0
+    a "{cps=35}This magma then goes through crystallization due to cold temperatures, which turn liquids into solids.{/cps}"
+    a "{cps=35}This is the cooling down of the rocks which forms into igneous rocks.{/cps}"
 
-    jump rock_cycle
+    hide hp
+    show we:
+        size(889, 500)
+        xalign 0.5
+        yalign 0
+    a "{cps=35}Overtime, weathering and erosion breaks down the rocks into smaller pieces.{/cps}"
+    a "{cps=35}We refer to these smaller pieces as sediments.{/cps}"
 
-label crystallization:
-    hide screen rock_cycle
-    show xtal
+    hide we
+    show cc:
+        size(889, 500)
+        xalign 0.5
+        yalign 0
+    a "{cps=35}And these sediments gets compacted and cemented{/cps}"
+    a "{cps=35}like how we glue objects to stick them together, forms sedimentary rocks{/cps}"
 
-    "{cps=35}Crystallization is turning liquid into solid through cold temperatures.{/cps}"
-    "{cps=35}This is the cooling down of the rock which turns into igneous rock.{/cps}"
+    hide xtal
+    show hp:
+        size(889, 500)
+        xalign 0.5
+        yalign 0
+    a "{cps=35}Then, as mentioned previously, we now know that as we go deeper into Earth's core the more heated the rocks get.{/cps}"
+    a "{cps=35}as well as, the deeper it gets the more pressure is applied on the rock due to overlying mass above it.{/cps}"
+    a "{cps=35}This then causes to form metamorphic rocks.{/cps}"
 
-    jump rock_cycle
-
-label heat_pressure:
-    hide screen rock_cycle
-    show hp
-
-    "{cps=35}As mentioned previously, we now know that as we go deeper into Earth's core the more heated the rocks get.{/cps}"
-    "{cps=35}as well as, the deeper it gets the more pressure is applied on the rock due to overlying mass above it.{/cps}"
-    "{cps=35}This then causes to form metamorphic rocks.{/cps}"
-
-    jump rock_cycle
-
-label weathering_erosion:
-    hide screen rock_cycle
-    show we
-
-    "{cps=35}Weathering and erosion is breaking down rocks into smaller pieces.{/cps}"
-    "{cps=35}We refer to these smaller pieces as sediments.{/cps}"
-
-    jump rock_cycle
-
-label compaction_cementation:
-    hide screen rock_cycle
-    show cc
-
-    "{cps=35}The sediments are small pieces of rocks caused by weathering and erosion.{/cps}"
-    "{cps=35}This can turn into sedimentary rocks by compaction and cementation,{/cps}"
-    "{cps=35}like how we glue objects to stick them together.{/cps}"
-
-    jump rock_cycle
-
+    hide hp
+    scene bg plain
+    show ame_blink:
+        xalign 0.5
+        yalign 0.5
+    a "Afterwards, the rocks will be recycled through these various processes over time."
 
 
 ################################################################################
@@ -725,7 +741,9 @@ label rock_quiz:
     hide screen rock_cycle
 
     show review
-    " "
+    window hide
+    pause
+
     scene bg plain
     show ame_blink at left
 
@@ -855,7 +873,8 @@ label inside_earth:
     hide screen question_5
 
     show inside
-    " "
+    window hide
+    pause
 
     scene bg plain
     show earth:
@@ -866,10 +885,10 @@ label inside_earth:
 
     a "{cps=35}Now that we have covered what geology is and what rocks are. We now want to understand the application of geology to real world.{/cps}"
     a "{cps=35}Geologists are interested with the data that rocks provide.{/cps}"
-    a "{cps=35}Geologists analyze the data and make an interpretation to optimize the information of the rocks, which then is used to solve real life problems.{/cps}"
+    a "{cps=35}Geologists analyze the data and make an interpretation to optimize the information given by the rocks, which then is used to solve real life problems.{/cps}"
     a "{cps=35}But before analyzing the rocks, geologists need to obtain the data and see what is inside the Earth.{/cps}"
     a "{cps=35}Many methods are used to obtain and record data from inside the Earth,{/cps}"
-    a "{cps=35}some of which are drilling, observing outcrop and mapping.{/cps}"
+    a "{cps=35}some of which are drilling, observing outcrops and mapping.{/cps}"
 
 # Drilling
 
@@ -892,7 +911,7 @@ label drilling:
 
     hide drilling
     show core_wframe with dissolve:
-        size(300, 450)
+        size(412, 550)
         xalign .5
         yalign 0.2
     show ame_teach at left
@@ -906,7 +925,7 @@ label outcrop:
 
     scene bg plain
     show outcrop with dissolve:
-        size(300, 450)
+        size(677, 500)
         xalign .5
         yalign 0.2
     show ame_teach at left
@@ -916,9 +935,9 @@ label outcrop:
     a "{cps=35}This is when geologists go out on the field to observe and collect data from the outcrop.{/cps}"
 
     hide outcrop
-    hide ame_blink
+    hide ame_teach
     show fieldnotes with dissolve:
-        size(711, 400)
+        size(677, 500)
         xalign .5
         yalign 0.2
     show ame_blink at left
@@ -943,7 +962,8 @@ label mapping:
 label scale:
 
     show scale
-    " "
+    window hide
+    pause
 
     scene bg plain
     show ame_blink
@@ -968,8 +988,6 @@ label scale:
     hide ts_wframe with dissolve
     hide ts_2
 
-
-
     a "{cps=35}{/cps}"
 
 #Review
@@ -979,9 +997,12 @@ label ending:
 #add major takeaways - ask questions, explore your world, be curious, etc.
     a "{cps=35}This ends our adventure today{/cps}"
     a "{cps=35}I hope you had fun and learned something new{/cps}"
-    a "{cps=35}{/cps}"
-    a "{cps=35}{/cps}"
-    a "{cps=35}{/cps}"
-    a "{cps=35}{/cps}"
+    a "{cps=35}I hope you learned how broad and wondrous geology is{/cps}"
+    a "{cps=35}From looking the bigger picture, the planet Earth itself, to the smallest scale of an unaided eye{/cps}"
+    a "{cps=35}Geology does prove and will continue to prove essential in exploring and unraveling mysteries about the world we live in{/cps}"
+    a "{cps=35}Geology teaches us how to understand the Earth better and how we can take care of it sustainably, while improving our quality of life{/cps}"
+    a "{cps=35}In conclusion, geology allows us to be curious and question things we don't understand{/cps}"
+    a "{cps=35}Which opens a whole wide world for an adventurer to explore.{/cps}"
+    a "{cps=35}Thank you students and parents for coming with me in this adventure, and you ROCK!{/cps}"
 
 return
