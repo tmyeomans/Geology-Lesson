@@ -34,6 +34,15 @@ image ame_teach:
     .1
     repeat
 
+image lava_an:
+    "lava_an1.png"
+    .5
+    "lava_an2.png"
+    .5
+    "lava_an3.png"
+    .5
+    repeat
+
 # Topic Covers
     # What is a geologist?
 image geo:
