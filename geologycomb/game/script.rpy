@@ -113,7 +113,7 @@ image scale:
     .5
     repeat
 
-define a = Character("Amethyst")
+define a = Character("{b}AMETHYST{/b}")
 
 #activity text
 define b = Character(kind = centered, what_text_align = 0.0, what_color = "FFC53A")
@@ -253,22 +253,31 @@ label lesson:
     a "{cps=35}Imagine when you cut an egg into half, you can see distinct layers.{/cps}"
 
     scene bg plain
-    show tle 3
+    show tle 3:
+        size(1067, 600)
+        xalign 0.5
+        yalign 0
     a "{cps=35}Like the shell in an egg, the crust is the outermost and thinnest layer of the Earth that we live on.{/cps}"
 
     scene bg plain
-    show tle 4
+    show tle 4:
+        size(1067, 600)
+        xalign 0.5
+        yalign 0
     a "{cps=35}The white portion represents the mantle.{/cps}"
     a "{cps=35}The mantle underneath the crust consists of melted rocks and is the source of magma{/cps}"
     a "{cps=35}which is the substance that erupts from volcanoes.{/cps}"
 
     scene bg plain
-    show tle 5
+    show tle 5:
+        size(1067, 600)
+        xalign 0.5
+        yalign 0
     a "{cps=35}And the yolk is the core of the Earth.{/cps}"
     a "{cps=35}The core is made out of iron alloy that consists of two parts{/cps}"
     a "{cps=35}The outer core is solid, while the inner core is liquid.{/cps}"
-    a "{cps=35}As we go deeper down towards the core, the hotter it gets.{/{/cps}"
-    a "{cps=35}The inner core can get hot as 5000°C!{/{/cps}"
+    a "{cps=35}As we go deeper down towards the core, the hotter it gets.{/cps}"
+    a "{cps=35}The inner core can get hot as 5000°C!{/cps}"
 
     a "{cps=35}We will now explore the three rock types that make up our earth, starting with igneous rocks{/cps}"
 
@@ -788,11 +797,12 @@ label question_1:
     a "Which of the following is not a type of rock? (Click on the answer)"
 
 label question_1_answer:
+
+    hide screen question_1
     a "{cps=35}That is correct! The three main types of rock are igneous, sedimentary and metamorphic{/cps}"
 
 label question_2:
 
-    hide screen question_1
     scene bg plain
     scene bg plain
     show ame_blink at left
@@ -810,11 +820,11 @@ label question_2:
 
 label question_2_answer:
 
+    hide screen question_2
     a "{cps=35}Great job! Igneous rocks forms from magma that has cooled down and turned into solid which is a process called crystallization.{/cps}"
 
 label question_3:
 
-    hide screen question_2
     scene bg plain
     show ame_blink at left
     show coral_wframe with dissolve:
@@ -830,11 +840,11 @@ label question_3:
 
 label question_3_answer:
 
+    hide screen question_3
     a "{cps=35}That is right! The carbonate sedimentary rock are formed from fossilized bodies of sea creatures found under water.{/cps}"
 
 label question_4:
 
-    hide screen question_3
     scene bg plain
     show ame_blink at left
     show tle 2 with dissolve:
@@ -851,11 +861,11 @@ label question_4:
 
 label question_4_anwser:
 
+    hide screen question_4
     a "{cps=35}Doing great so far! Yes, The core is made out of iron alloy and has two parts which are the outer core and inner core.{/cps}"
 
 label question_5:
 
-    hide screen question_4
     scene bg plain
     show ame_blink at left
     show meta2_wframe with dissolve:
@@ -873,8 +883,9 @@ label question_5:
 
 label question_5_answer:
 
-    a "{cps=35}Yes! The answer is metamorphic rock. Metamorphic rock forms under pressure from overlying mass, which often forms the banded feature.{/cps}"
-    a "{cps=35}while the increasing heat can form shiny minerals, which is distinctive of metamorphic rocks.{/cps}"
+    hide screen question_5
+    a "{cps=35}Yes! The answer is metamorphic rock.{/cps}"
+    a "{cps=35}Metamorphic rocks form under pressure from due to overlying mass and heat which increases with depth.{/cps}"
     a "{cps=35}Amazing job on getting all the correct answers!{/cps}"
     a "{cps=35}We will now continue on to next topic.{/cps}"
 
@@ -905,11 +916,7 @@ label inside_earth:
     pause
 
     scene bg plain
-    show earth:
-        size(889, 500)
-        xalign .5
-        yalign 0
-    show ame_blink at left
+    show ame_blink at truecenter with dissolve
 
     a "{cps=35}Now that we have covered some geology basics, how do we study and measure geology in real world?{/cps}"
     a "{cps=35}Geologists are interested with the data that rocks provide.{/cps}"
@@ -924,7 +931,7 @@ label inside_earth:
 label drilling:
 
     scene bg plain
-    show ame_blink at left
+    show ame_blink at left with dissolve
 
     a "{cps=35}By drilling, geologists are able to collect rock samples from the subsurface that they can observe and analyze.{/cps}"
 
@@ -1052,9 +1059,9 @@ label ending:
     c "We wanted to give parents and students a way to explore science at home during Covid-19"
     c "We are open to feedback and suggestions.  You can get a hold of us at amethystgeoadventure@gmail.com"
     c"Credits:\n
-    Illustrations: __________, Kristyll Avila, Tanya Yeomans\n
+    Illustrations: Nicole Lo, Kristyll Avila, Tanya Yeomans\n
     Coding: Kristyll Avila, Tanya Yeomans\n
-    Toy Piano Music:___________\n
+    Toy Piano: {a=https://www.youtube.com/audiolibrary/music?nv=1}Wayne Jones {/a}\n
     Sugar Crystal Recipe: {a=https://www.thespruceeats.com/rock-candy-521016}The Spruce Eats {/a}\n
     Modelling Clay Recipe: {a=https://funlearningforkids.com/easy-play-dough-recipe-without-cream-tartar/}Fun Learning for Kids{\a}"
 
