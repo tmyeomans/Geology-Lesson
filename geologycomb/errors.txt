@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 110: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
-    menu:
+File "game/script.rpy", line 989: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    a "{cps=35}Geologists use field notebooks which is like a journal. They record every detail about the rocks and outcrops they observe.{/cps}"
     ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu May 28 17:09:48 2020
+Thu Jun 04 06:37:36 2020
